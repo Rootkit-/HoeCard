@@ -25,7 +25,9 @@
   color: #fff;
   background-color: transparent;
 }
-
+#conbodys{
+    margin-top:40px;
+    }
 .nav-link.golds {
   color: #fff;
 }

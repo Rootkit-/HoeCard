@@ -1411,7 +1411,7 @@
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 14px;
             line-height: 1.42857143;
-            color: #333;
+            color: #000;
             background-color: #fff
         }
 
@@ -1527,7 +1527,7 @@
             font-family: inherit;
             font-weight: 500;
             line-height: 1.1;
-            color: inherit
+            color: #fff
         }
 
         .h1 .small,
@@ -1556,7 +1556,7 @@
         h6 small {
             font-weight: 400;
             line-height: 1;
-            color: #777
+            color: #fff
         }
 
         .h1,
@@ -1975,7 +1975,7 @@
             margin: 0 0 10px;
             font-size: 13px;
             line-height: 1.42857143;
-            color: #333;
+            color: #000;
             word-break: break-all;
             word-wrap: break-word;
             background-color: #f5f5f5;
@@ -1986,7 +1986,7 @@
         pre code {
             padding: 0;
             font-size: inherit;
-            color: inherit;
+            color: white;
             white-space: pre-wrap;
             background-color: transparent;
             border-radius: 0
@@ -3263,7 +3263,7 @@
             margin-bottom: 20px;
             font-size: 21px;
             line-height: inherit;
-            color: #333;
+            color: #000;
             border: 0;
             border-bottom: 1px solid #e5e5e5
         }
@@ -3887,7 +3887,7 @@
         .btn.focus,
         .btn:focus,
         .btn:hover {
-            color: #333;
+            color: #000;
             text-decoration: none
         }
 
@@ -3915,20 +3915,20 @@
         }
 
         .btn-default {
-            color: #333;
+            color: #000;
             background-color: #fff;
             border-color: #ccc
         }
 
         .btn-default.focus,
         .btn-default:focus {
-            color: #333;
+            color: #000;
             background-color: #e6e6e6;
             border-color: #8c8c8c
         }
 
         .btn-default:hover {
-            color: #333;
+            color: #000;
             background-color: #e6e6e6;
             border-color: #adadad
         }
@@ -3936,7 +3936,7 @@
         .btn-default.active,
         .btn-default:active,
         .open>.dropdown-toggle.btn-default {
-            color: #333;
+            color: #000;
             background-color: #e6e6e6;
             border-color: #adadad
         }
@@ -3950,7 +3950,7 @@
         .open>.dropdown-toggle.btn-default.focus,
         .open>.dropdown-toggle.btn-default:focus,
         .open>.dropdown-toggle.btn-default:hover {
-            color: #333;
+            color: #000;
             background-color: #d4d4d4;
             border-color: #8c8c8c
         }
@@ -4485,7 +4485,7 @@
             clear: both;
             font-weight: 400;
             line-height: 1.42857143;
-            color: #333;
+            color: #000;
             white-space: nowrap
         }
 
@@ -5638,7 +5638,7 @@
 
         .navbar-default .navbar-nav>li>a:focus,
         .navbar-default .navbar-nav>li>a:hover {
-            color: #333;
+            color: #000;
             background-color: transparent
         }
 
@@ -5688,7 +5688,7 @@
 
             .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,
             .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
-                color: #333;
+                color: #000;
                 background-color: transparent
             }
 
@@ -6176,7 +6176,7 @@
             padding-top: 30px;
             padding-bottom: 30px;
             margin-bottom: 30px;
-            color: inherit;
+            color: white;
             background-color: #eee
         }
 
@@ -6777,7 +6777,7 @@
         }
 
         .panel-heading {
-            padding: 10px 15px;
+            padding: 5px 5px;
             border-bottom: 1px solid transparent;
             border-top-left-radius: 3px;
             border-top-right-radius: 3px
@@ -6790,8 +6790,8 @@
         .panel-title {
             margin-top: 0;
             margin-bottom: 0;
-            font-size: 16px;
-            color: inherit
+            font-size: 26px;
+            color: #fff
         }
 
         .panel-title>.small,
@@ -7042,7 +7042,7 @@
         }
 
         .panel-default>.panel-heading {
-            color: #333;
+            color: #000;
             background-color: #f5f5f5;
             border-color: #ddd
         }
@@ -8349,6 +8349,7 @@
         }
 
         table {
+        color:#fff;
             border-color: #585f61;
         }
 
@@ -8409,7 +8410,7 @@
     margin-right: 4px;
     margin-bottom: 4px;   
 
-    font-size: 14px;
+    font-size: 20px;
 	text-shadow: 0 -1px 0 #000;
 }
 #myButtonz:hover {
@@ -8441,12 +8442,17 @@
     }
 }
 #topper{
-       position:fixed!important;
-    top:0%!important;
-    margin-left:auto;
-        margin-right:auto;
-    z-index:123123!important;
+      float: left;
+      position: relative;
+      left: -50%;
 
+        }
+#main-nav{
+       position:fixed!important;
+    top:5px!important;
+    z-index:123123!important;
+      float: left;  
+      left: 50%;
 }</style>
     <script>
         function myFunction(type) {
@@ -8462,19 +8468,19 @@
         if (type == 'demon') {
             var obj = document.querySelector('.demon')
             var ot = findpos(obj)
-           window.scrollTo(0, ot - 75)
+           window.scrollTo(0, ot - 120)
            } else if (type == 'undead') {
             var obj = document.querySelector('.undead')
             var ot = findpos(obj)
-           window.scrollTo(0, ot - 75)
+           window.scrollTo(0, ot - 120)
            } else if (type == 'other') {
             var obj = document.querySelector('.other')
             var ot = findpos(obj)
-           window.scrollTo(0, ot - 75)
+           window.scrollTo(0, ot - 120)
            } 
         }                       
     </script>
-<div id="main-nav" style="height: 17px;"><span id="topper" style="margin-right: 4px;"><button class="plus-button-iss" onclick="myFunction('demon')" id="myButtonz" style="margin-left: 3px;">Demon</button><button class="plus-button-iss" onclick="myFunction('undead')" id="myButtonz" style="margin-left: 3px;">Undead</button><button onclick="myFunction('other')" class="plus-button-iss" id="myButtonz" style="margin-left: 3px;">Other</button></span></div>
+<div id="main-nav" style="height: 17px;"><span id="topper"><button class="plus-button-iss" onclick="myFunction('demon')" id="myButtonz" style="margin-left: 3px;">Demon</button><button class="plus-button-iss" onclick="myFunction('undead')" id="myButtonz" style="margin-left: 3px;">Undead</button><button onclick="myFunction('other')" class="plus-button-iss" id="myButtonz" style="margin-left: 3px;">Other</button></span></div>
     <div class="container" id="conbodys">
 
         <div class="row" id="top">
@@ -8492,7 +8498,7 @@
                                 <div class='demon'>
 
                                     <div id="Master of Necromancy">
-                                        <h3>Master of Necromancy (4) <small>Collection Bonus</small></h3>
+                                        <h3>Master of Necromancy (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8515,7 +8521,7 @@
                                     </div>
 
                                     <div id="Priest of the Dawn">
-                                        <h3>Priest of the Dawn (3) <small>Collection Bonus</small></h3>
+                                        <h3>Priest of the Dawn (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8537,7 +8543,7 @@
                                         </table>
                                     </div>
                                     <div id="Forest of Giants">
-                                        <h3>Forest of Giants (3) <small>Collection Bonus</small></h3>
+                                        <h3>Forest of Giants (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8560,7 +8566,7 @@
                                     </div>
 
                                     <div id="Light of Salvation">
-                                        <h3>Light of Salvation (7) <small>Collection Bonus</small></h3>
+                                        <h3>Light of Salvation (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8582,7 +8588,7 @@
                                         </table>
                                     </div>
                                     <div id="Darkness Legion">
-                                        <h3>Darkness Legion (6) <small>Collection Bonus</small></h3>
+                                        <h3>Darkness Legion (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8605,7 +8611,7 @@
                                     </div>
 
                                     <div id="Narkiel&#39;s Curse">
-                                        <h3>Narkiel's Curse (4) <small>Collection Bonus</small></h3>
+                                        <h3>Narkiel's Curse (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8628,7 +8634,7 @@
                                     </div>
 
                                     <div id="Moonmist Manor">
-                                        <h3>Moonmist Manor (2) <small>Collection Bonus</small></h3>
+                                        <h3>Moonmist Manor (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8651,7 +8657,7 @@
                                     </div>
 
                                     <div id="Mormot">
-                                        <h3>Mormot (4) <small>Collection Bonus</small></h3>
+                                        <h3>Mormot (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8674,7 +8680,7 @@
                                     </div>
 
                                     <div id="Unfinished Match">
-                                        <h3>Unfinished Match (4) <small>Collection Bonus</small></h3>
+                                        <h3>Unfinished Match (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8697,7 +8703,7 @@
                                     </div>
 
                                     <div id="Mystracia&#39;s Secret">
-                                        <h3>Mystracia's Secret (3) <small>Collection Bonus</small></h3>
+                                        <h3>Mystracia's Secret (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8720,7 +8726,7 @@
                                     </div>
 
                                     <div id="Cradle of Stone">
-                                        <h3>Cradle of Stone (5) <small>Collection Bonus</small></h3>
+                                        <h3>Cradle of Stone (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8743,7 +8749,7 @@
                                     </div>
 
                                     <div id="Borea Knights">
-                                        <h3>Borea Knights (3) <small>Collection Bonus</small></h3>
+                                        <h3>Borea Knights (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8766,7 +8772,7 @@
                                     </div>
 
                                     <div id="Ghost Busters">
-                                        <h3>Ghost Busters (6) <small>Collection Bonus</small></h3>
+                                        <h3>Ghost Busters (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8789,7 +8795,7 @@
                                     </div>
 
                                     <div id="The Lord of Mayhem">
-                                        <h3>The Lord of Mayhem (2) <small>Collection Bonus</small></h3>
+                                        <h3>The Lord of Mayhem (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8812,7 +8818,7 @@
                                     </div>
 
                                     <div id="I Missed You">
-                                        <h3>I Missed You (2) <small>Collection Bonus</small></h3>
+                                        <h3>I Missed You (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8835,7 +8841,7 @@
                                     </div>
 
                                     <div id="Tortoyk the Giant">
-                                        <h3>Tortoyk the Giant (10) <small>Collection Bonus</small></h3>
+                                        <h3>Tortoyk the Giant (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8857,7 +8863,7 @@
                                         </table>
                                     </div>
                                     <div id="Eternity Isle">
-                                        <h3>Eternity Isle (2) <small>Collection Bonus</small></h3>
+                                        <h3>Eternity Isle (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8879,7 +8885,7 @@
                                         </table>
                                     </div>
                                     <div id="Nineveh and Children">
-                                        <h3>Nineveh and Children (5) <small>Collection Bonus</small></h3>
+                                        <h3>Nineveh and Children (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8901,7 +8907,7 @@
                                         </table>
                                     </div>
                                     <div id="Pirate Generation">
-                                        <h3>Pirate Generation (6) <small>Collection Bonus</small></h3>
+                                        <h3>Pirate Generation (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8924,7 +8930,7 @@
                                     </div>
 
                                     <div id="The Excitement of Punika">
-                                        <h3>The Excitement of Punika (5) <small>Collection Bonus</small></h3>
+                                        <h3>The Excitement of Punika (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8947,7 +8953,7 @@
                                     </div>
 
                                     <div id="Solar Knights">
-                                        <h3>Solar Knights (7) <small>Collection Bonus</small></h3>
+                                        <h3>Solar Knights (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -8969,7 +8975,7 @@
                                         </table>
                                     </div>
                                     <div id="The Ruins of Xeneela">
-                                        <h3>The Ruins of Xeneela (6) <small>Collection Bonus</small></h3>
+                                        <h3>The Ruins of Xeneela (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9005,7 +9011,7 @@
 
                             <div class='undead'>
                                 <div id="Guardian&#39;s Threat">
-                                    <h3>Guardian's Threat (6) <small>Collection Bonus</small></h3>
+                                    <h3>Guardian's Threat (6)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9027,7 +9033,7 @@
                                     </table>
                                 </div>
                                 <div id="Oh My Elder">
-                                    <h3>Oh My Elder (4) <small>Collection Bonus</small></h3>
+                                    <h3>Oh My Elder (4)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9049,7 +9055,7 @@
                                     </table>
                                 </div>
                                 <div id="Don&#39;t Go Too Far">
-                                    <h3>Don't Go Too Far (2) <small>Collection Bonus</small></h3>
+                                    <h3>Don't Go Too Far (2)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9072,7 +9078,7 @@
                                 </div>
 
                                 <div id="9th Sword of Changhun">
-                                    <h3>9th Sword of Changhun (9) <small>Collection Bonus</small></h3>
+                                    <h3>9th Sword of Changhun (9)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9095,7 +9101,7 @@
                                 </div>
 
                                 <div id="Cherish Your Books">
-                                    <h3>Cherish Your Books (4) <small>Collection Bonus</small></h3>
+                                    <h3>Cherish Your Books (4)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9117,7 +9123,7 @@
                                     </table>
                                 </div>
                                 <div id="Offering to Kazeros">
-                                    <h3>Offering to Kazeros (3) <small>Collection Bonus</small></h3>
+                                    <h3>Offering to Kazeros (3)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9139,7 +9145,7 @@
                                     </table>
                                 </div>
                                 <div id="Field Boss I">
-                                    <h3>Field Boss I (10) <small>Collection Bonus</small></h3>
+                                    <h3>Field Boss I (10)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9162,7 +9168,7 @@
                                 </div>
 
                                 <div id="Overwhelming Power">
-                                    <h3>Overwhelming Power (4) <small>Collection Bonus</small></h3>
+                                    <h3>Overwhelming Power (4)</h3>
 
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
@@ -9186,7 +9192,7 @@
                                 </div>
 
                                 <div id="Hello, Kokomo">
-                                    <h3>Hello, Kokomo (3) <small>Collection Bonus</small></h3>
+                                    <h3>Hello, Kokomo (3)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9209,7 +9215,7 @@
                                 </div>
 
                                 <div id="Allegro&#39;s Tale">
-                                    <h3>Allegro's Tale (5) <small>Collection Bonus</small></h3>
+                                    <h3>Allegro's Tale (5)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9232,7 +9238,7 @@
                                 </div>
 
                                 <div id="Under the Sea">
-                                    <h3>Under the Sea (2) <small>Collection Bonus</small></h3>
+                                    <h3>Under the Sea (2)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9255,7 +9261,7 @@
                                 </div>
 
                                 <div id="Upgrade">
-                                    <h3>Upgrade (2) <small>Collection Bonus</small></h3>
+                                    <h3>Upgrade (2)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9278,7 +9284,7 @@
                                 </div>
 
                                 <div id="Who Wears the Crown">
-                                    <h3>Who Wears the Crown (4) <small>Collection Bonus</small></h3>
+                                    <h3>Who Wears the Crown (4)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9301,7 +9307,7 @@
                                 </div>
 
                                 <div id="Remember Us">
-                                    <h3>Remember Us (4) <small>Collection Bonus</small></h3>
+                                    <h3>Remember Us (4)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9323,7 +9329,7 @@
                                     </table>
                                 </div>
                                 <div id="Death Approaches">
-                                    <h3>Death Approaches (4) <small>Collection Bonus</small></h3>
+                                    <h3>Death Approaches (4)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9345,7 +9351,7 @@
                                     </table>
                                 </div>
                                 <div id="Grand Master Trial">
-                                    <h3>Grand Master Trial (6) <small>Collection Bonus</small></h3>
+                                    <h3>Grand Master Trial (6)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9367,7 +9373,7 @@
                                     </table>
                                 </div>
                                 <div id="Demon Beast Legion">
-                                    <h3>Demon Beast Legion (2) <small>Collection Bonus</small></h3>
+                                    <h3>Demon Beast Legion (2)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9390,7 +9396,7 @@
                                 </div>
 
                                 <div id="A Letter to My Friend">
-                                    <h3>A Letter to My Friend (2) <small>Collection Bonus</small></h3>
+                                    <h3>A Letter to My Friend (2)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9413,7 +9419,7 @@
                                 </div>
 
                                 <div id="Glacier Isle">
-                                    <h3>Glacier Isle (3) <small>Collection Bonus</small></h3>
+                                    <h3>Glacier Isle (3)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9436,7 +9442,7 @@
                                 </div>
 
                                 <div id="Western Revolutionary Army">
-                                    <h3>Western Revolutionary Army (6) <small>Collection Bonus</small></h3>
+                                    <h3>Western Revolutionary Army (6)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9459,7 +9465,7 @@
                                     </table>
                                 </div>
                                 <div id="Gate of Paradise">
-                                    <h3>Gate of Paradise (4) <small>Collection Bonus</small></h3>
+                                    <h3>Gate of Paradise (4)</h3>
                                     <table class="table table-striped table-hover table-bordered">
                                         <tbody>
                                             <tr>
@@ -9500,7 +9506,7 @@
                                 <div class='other'>
 
                                     <div id="Guardian&#39;s Mayhem">
-                                        <h3>Guardian's Mayhem (7) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian's Mayhem (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9523,7 +9529,7 @@
                                     </div>
 
                                     <div id="Guardian&#39;s Fury">
-                                        <h3>Guardian's Fury (4) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian's Fury (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9547,7 +9553,7 @@
 
 
                                     <div id="Guardian&#39;s Hatred">
-                                        <h3>Guardian's Hatred (2) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian's Hatred (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9570,7 +9576,7 @@
                                     </div>
 
                                     <div id="Guardian&#39;s Roar">
-                                        <h3>Guardian's Roar (7) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian's Roar (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9593,7 +9599,7 @@
                                     </div>
 
                                     <div id="Maze of Mirrors">
-                                        <h3>Maze of Mirrors (5) <small>Collection Bonus</small></h3>
+                                        <h3>Maze of Mirrors (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9616,7 +9622,7 @@
                                     </div>
 
                                     <div id="Curse Those Telpas!">
-                                        <h3>Curse Those Telpas! (2) <small>Collection Bonus</small></h3>
+                                        <h3>Curse Those Telpas! (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9639,7 +9645,7 @@
                                     </div>
 
                                     <div id="Dark Rain Plains">
-                                        <h3>Dark Rain Plains (10) <small>Collection Bonus</small></h3>
+                                        <h3>Dark Rain Plains (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9662,7 +9668,7 @@
                                     </div>
 
                                     <div id="Open the Gate!">
-                                        <h3>Open the Gate! (3) <small>Collection Bonus</small></h3>
+                                        <h3>Open the Gate! (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9685,7 +9691,7 @@
                                     </div>
 
                                     <div id="Clashing Magick">
-                                        <h3>Clashing Magick (2) <small>Collection Bonus</small></h3>
+                                        <h3>Clashing Magick (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9708,7 +9714,7 @@
                                     </div>
 
                                     <div id="Earthshattering">
-                                        <h3>Earthshattering (2) <small>Collection Bonus</small></h3>
+                                        <h3>Earthshattering (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9733,7 +9739,7 @@
                                     </div>
 
                                     <div id="Where There&#39;s a Will">
-                                        <h3>Where There's a Will (3) <small>Collection Bonus</small></h3>
+                                        <h3>Where There's a Will (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9758,7 +9764,7 @@
 
 
                                     <div id="Incredible!">
-                                        <h3>Incredible! (3) <small>Collection Bonus</small></h3>
+                                        <h3>Incredible! (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9781,7 +9787,7 @@
                                     </div>
 
                                     <div id="Bug Collection">
-                                        <h3>Bug Collection (3) <small>Collection Bonus</small></h3>
+                                        <h3>Bug Collection (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9804,7 +9810,7 @@
                                     </div>
 
                                     <div id="Mayhem Legion">
-                                        <h3>Mayhem Legion (3) <small>Collection Bonus</small></h3>
+                                        <h3>Mayhem Legion (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9827,7 +9833,7 @@
                                     </div>
 
                                     <div id="Festival of Mayhem">
-                                        <h3>Festival of Mayhem (10) <small>Collection Bonus</small></h3>
+                                        <h3>Festival of Mayhem (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9850,7 +9856,7 @@
                                     </div>
 
                                     <div id="Brilliant Ridge">
-                                        <h3>Brilliant Ridge (3) <small>Collection Bonus</small></h3>
+                                        <h3>Brilliant Ridge (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9875,7 +9881,7 @@
 
 
                                     <div id="Off the Record">
-                                        <h3>Off the Record (2) <small>Collection Bonus</small></h3>
+                                        <h3>Off the Record (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9898,7 +9904,7 @@
                                     </div>
 
                                     <div id="Luterra, Country of Knights">
-                                        <h3>Luterra, Country of Knights (10) <small>Collection Bonus</small></h3>
+                                        <h3>Luterra, Country of Knights (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9921,7 +9927,7 @@
                                     </div>
 
                                     <div id="Bent Sword">
-                                        <h3>Bent Sword (3) <small>Collection Bonus</small></h3>
+                                        <h3>Bent Sword (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9946,7 +9952,7 @@
 
 
                                     <div id="Lostwind Cliff">
-                                        <h3>Lostwind Cliff (6) <small>Collection Bonus</small></h3>
+                                        <h3>Lostwind Cliff (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9969,7 +9975,7 @@
                                     </div>
 
                                     <div id="Join Up">
-                                        <h3>Join Up (8) <small>Collection Bonus</small></h3>
+                                        <h3>Join Up (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -9992,7 +9998,7 @@
                                     </div>
 
                                     <div id="Eat It Up">
-                                        <h3>Eat It Up (3) <small>Collection Bonus</small></h3>
+                                        <h3>Eat It Up (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10015,7 +10021,7 @@
                                     </div>
 
                                     <div id="You&#39;ll Talk Eventually">
-                                        <h3>You'll Talk Eventually (2) <small>Collection Bonus</small></h3>
+                                        <h3>You'll Talk Eventually (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10038,7 +10044,7 @@
                                     </div>
 
                                     <div id="Undervalued Words">
-                                        <h3>Undervalued Words (3) <small>Collection Bonus</small></h3>
+                                        <h3>Undervalued Words (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10061,7 +10067,7 @@
                                     </div>
 
                                     <div id="Neria&#39;s Tavern 1">
-                                        <h3>Neria's Tavern 1 (5) <small>Collection Bonus</small></h3>
+                                        <h3>Neria's Tavern 1 (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10084,7 +10090,7 @@
                                     </div>
 
                                     <div id="Anchor&#39;s Rest">
-                                        <h3>Anchor's Rest (3) <small>Collection Bonus</small></h3>
+                                        <h3>Anchor's Rest (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10107,7 +10113,7 @@
                                     </div>
 
                                     <div id="Count On Me">
-                                        <h3>Count On Me (4) <small>Collection Bonus</small></h3>
+                                        <h3>Count On Me (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10131,7 +10137,7 @@
 
 
                                     <div id="Niheltalop&#39;s Thoughts">
-                                        <h3>Niheltalop's Thoughts (2) <small>Collection Bonus</small></h3>
+                                        <h3>Niheltalop's Thoughts (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10154,7 +10160,7 @@
                                     </div>
 
                                     <div id="Back Again">
-                                        <h3>Back Again (5) <small>Collection Bonus</small></h3>
+                                        <h3>Back Again (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10177,7 +10183,7 @@
                                     </div>
 
                                     <div id="Great Leaders">
-                                        <h3>Great Leaders (10) <small>Collection Bonus</small></h3>
+                                        <h3>Great Leaders (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10201,7 +10207,7 @@
 
 
                                     <div id="Dancing Queen">
-                                        <h3>Dancing Queen (4) <small>Collection Bonus</small></h3>
+                                        <h3>Dancing Queen (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10224,7 +10230,7 @@
                                     </div>
 
                                     <div id="Animal Farm">
-                                        <h3>Animal Farm (8) <small>Collection Bonus</small></h3>
+                                        <h3>Animal Farm (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10247,7 +10253,7 @@
                                     </div>
 
                                     <div id="The Mind&#39;s Potential">
-                                        <h3>The Mind's Potential (2) <small>Collection Bonus</small></h3>
+                                        <h3>The Mind's Potential (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10270,7 +10276,7 @@
                                     </div>
 
                                     <div id="Leyar&#39;s Savior">
-                                        <h3>Leyar's Savior (5) <small>Collection Bonus</small></h3>
+                                        <h3>Leyar's Savior (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10293,7 +10299,7 @@
                                     </div>
 
                                     <div id="Lazenith">
-                                        <h3>Lazenith (3) <small>Collection Bonus</small></h3>
+                                        <h3>Lazenith (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10316,7 +10322,7 @@
                                     </div>
 
                                     <div id="Welcome to Prideholme">
-                                        <h3>Welcome to Prideholme (4) <small>Collection Bonus</small></h3>
+                                        <h3>Welcome to Prideholme (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10339,7 +10345,7 @@
                                     </div>
 
                                     <div id="Struggle for Succession">
-                                        <h3>Struggle for Succession (4) <small>Collection Bonus</small></h3>
+                                        <h3>Struggle for Succession (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10363,7 +10369,7 @@
                                     </div>
 
                                     <div id="Luterra&#39;s Ordeal">
-                                        <h3>Luterra's Ordeal (6) <small>Collection Bonus</small></h3>
+                                        <h3>Luterra's Ordeal (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10386,7 +10392,7 @@
                                     </div>
 
                                     <div id="Blessed by Magick">
-                                        <h3>Blessed by Magick (9) <small>Collection Bonus</small></h3>
+                                        <h3>Blessed by Magick (9)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10410,7 +10416,7 @@
 
 
                                     <div id="Master Chef of Arkesia">
-                                        <h3>Master Chef of Arkesia (3) <small>Collection Bonus</small></h3>
+                                        <h3>Master Chef of Arkesia (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10433,7 +10439,7 @@
                                     </div>
 
                                     <div id="Call with All Your Heart">
-                                        <h3>Call with All Your Heart (6) <small>Collection Bonus</small></h3>
+                                        <h3>Call with All Your Heart (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10456,7 +10462,7 @@
                                     </div>
 
                                     <div id="Morai Ruins">
-                                        <h3>Morai Ruins (4) <small>Collection Bonus</small></h3>
+                                        <h3>Morai Ruins (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10479,7 +10485,7 @@
                                     </div>
 
                                     <div id="Adventurer&#39;s Guild Quest">
-                                        <h3>Adventurer's Guild Quest (5) <small>Collection Bonus</small></h3>
+                                        <h3>Adventurer's Guild Quest (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10502,7 +10508,7 @@
                                     </div>
 
                                     <div id="Phantom Palace">
-                                        <h3>Phantom Palace (8) <small>Collection Bonus</small></h3>
+                                        <h3>Phantom Palace (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10525,7 +10531,7 @@
                                     </div>
 
                                     <div id="Farewell, Weapon">
-                                        <h3>Farewell, Weapon (6) <small>Collection Bonus</small></h3>
+                                        <h3>Farewell, Weapon (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10548,7 +10554,7 @@
                                     </div>
 
                                     <div id="Iron Arms and Legs">
-                                        <h3>Iron Arms and Legs (6) <small>Collection Bonus</small></h3>
+                                        <h3>Iron Arms and Legs (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10571,7 +10577,7 @@
                                     </div>
 
                                     <div id="Set Sail!">
-                                        <h3>Set Sail! (5) <small>Collection Bonus</small></h3>
+                                        <h3>Set Sail! (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10594,7 +10600,7 @@
                                     </div>
 
                                     <div id="Disaster at Sea">
-                                        <h3>Disaster at Sea (5) <small>Collection Bonus</small></h3>
+                                        <h3>Disaster at Sea (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10617,7 +10623,7 @@
                                     </div>
 
                                     <div id="King of All That Shines">
-                                        <h3>King of All That Shines (2) <small>Collection Bonus</small></h3>
+                                        <h3>King of All That Shines (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10640,7 +10646,7 @@
                                     </div>
 
                                     <div id="A Ranger&#39;s Revenge">
-                                        <h3>A Ranger's Revenge (2) <small>Collection Bonus</small></h3>
+                                        <h3>A Ranger's Revenge (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10663,7 +10669,7 @@
                                     </div>
 
                                     <div id="The Hundred-Demon Parade">
-                                        <h3>The Hundred-Demon Parade (4) <small>Collection Bonus</small></h3>
+                                        <h3>The Hundred-Demon Parade (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10686,7 +10692,7 @@
                                     </div>
 
                                     <div id="Bestseller">
-                                        <h3>Bestseller (5) <small>Collection Bonus</small></h3>
+                                        <h3>Bestseller (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10709,7 +10715,7 @@
                                     </div>
 
                                     <div id="To Find Velcruze">
-                                        <h3>To Find Velcruze (10) <small>Collection Bonus</small></h3>
+                                        <h3>To Find Velcruze (10)</h3>
 
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
@@ -10733,7 +10739,7 @@
                                     </div>
 
                                     <div id="Nothing Wrong">
-                                        <h3>Nothing Wrong (6) <small>Collection Bonus</small></h3>
+                                        <h3>Nothing Wrong (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10756,7 +10762,7 @@
                                     </div>
 
                                     <div id="Song of Starlight">
-                                        <h3>Song of Starlight (2) <small>Collection Bonus</small></h3>
+                                        <h3>Song of Starlight (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10779,7 +10785,7 @@
                                     </div>
 
                                     <div id="Starlight City">
-                                        <h3>Starlight City (5) <small>Collection Bonus</small></h3>
+                                        <h3>Starlight City (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10802,7 +10808,7 @@
                                     </div>
 
                                     <div id="Seize the Insolent One">
-                                        <h3>Seize the Insolent One (3) <small>Collection Bonus</small></h3>
+                                        <h3>Seize the Insolent One (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10825,7 +10831,7 @@
                                     </div>
 
                                     <div id="Prideholme on Fire">
-                                        <h3>Prideholme on Fire (4) <small>Collection Bonus</small></h3>
+                                        <h3>Prideholme on Fire (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10848,7 +10854,7 @@
                                     </div>
 
                                     <div id="Polar Frost">
-                                        <h3>Polar Frost (10) <small>Collection Bonus</small></h3>
+                                        <h3>Polar Frost (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10871,7 +10877,7 @@
                                     </div>
 
                                     <div id="Historic Family">
-                                        <h3>Historic Family (3) <small>Collection Bonus</small></h3>
+                                        <h3>Historic Family (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10894,7 +10900,7 @@
                                     </div>
 
                                     <div id="Romanticist">
-                                        <h3>Romanticist (4) <small>Collection Bonus</small></h3>
+                                        <h3>Romanticist (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10917,7 +10923,7 @@
                                     </div>
 
                                     <div id="Sidereals in the Chain War">
-                                        <h3>Sidereals in the Chain War (7) <small>Collection Bonus</small></h3>
+                                        <h3>Sidereals in the Chain War (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10940,7 +10946,7 @@
                                     </div>
 
                                     <div id="A Friend, Perhaps">
-                                        <h3>A Friend, Perhaps (2) <small>Collection Bonus</small></h3>
+                                        <h3>A Friend, Perhaps (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10963,7 +10969,7 @@
                                     </div>
 
                                     <div id="Lion Dance">
-                                        <h3>Lion Dance (2) <small>Collection Bonus</small></h3>
+                                        <h3>Lion Dance (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -10986,7 +10992,7 @@
                                     </div>
 
                                     <div id="We&#39;ll Meet Again">
-                                        <h3>We'll Meet Again (3) <small>Collection Bonus</small></h3>
+                                        <h3>We'll Meet Again (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11009,7 +11015,7 @@
                                     </div>
 
                                     <div id="Bleak Edge">
-                                        <h3>Bleak Edge (5) <small>Collection Bonus</small></h3>
+                                        <h3>Bleak Edge (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11032,7 +11038,7 @@
                                     </div>
 
                                     <div id="Triarchy">
-                                        <h3>Triarchy (3) <small>Collection Bonus</small></h3>
+                                        <h3>Triarchy (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11057,7 +11063,7 @@
 
 
                                     <div id="Master of the Island">
-                                        <h3>Master of the Island (7) <small>Collection Bonus</small></h3>
+                                        <h3>Master of the Island (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11080,7 +11086,7 @@
                                     </div>
 
                                     <div id="Three Umar Families">
-                                        <h3>Three Umar Families (3) <small>Collection Bonus</small></h3>
+                                        <h3>Three Umar Families (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11103,7 +11109,7 @@
                                     </div>
 
                                     <div id="World Wanderer">
-                                        <h3>World Wanderer (5) <small>Collection Bonus</small></h3>
+                                        <h3>World Wanderer (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11126,7 +11132,7 @@
                                     </div>
 
                                     <div id="Sacrian Priest">
-                                        <h3>Sacrian Priest (5) <small>Collection Bonus</small></h3>
+                                        <h3>Sacrian Priest (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11149,7 +11155,7 @@
                                     </div>
 
                                     <div id="Girls&#39; Generation">
-                                        <h3>Girls' Generation (8) <small>Collection Bonus</small></h3>
+                                        <h3>Girls' Generation (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11172,7 +11178,7 @@
                                     </div>
 
                                     <div id="A Legendary Boy">
-                                        <h3>A Legendary Boy (3) <small>Collection Bonus</small></h3>
+                                        <h3>A Legendary Boy (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11195,7 +11201,7 @@
                                     </div>
 
                                     <div id="Sien Inn">
-                                        <h3>Sien Inn (5) <small>Collection Bonus</small></h3>
+                                        <h3>Sien Inn (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11218,7 +11224,7 @@
                                     </div>
 
                                     <div id="Godlike Archer">
-                                        <h3>Godlike Archer (3) <small>Collection Bonus</small></h3>
+                                        <h3>Godlike Archer (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11241,7 +11247,7 @@
                                     </div>
 
                                     <div id="Dicotyledon">
-                                        <h3>Dicotyledon (2) <small>Collection Bonus</small></h3>
+                                        <h3>Dicotyledon (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11264,7 +11270,7 @@
                                     </div>
 
                                     <div id="Scene Stealer">
-                                        <h3>Scene Stealer (6) <small>Collection Bonus</small></h3>
+                                        <h3>Scene Stealer (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11287,7 +11293,7 @@
                                     </div>
 
                                     <div id="Avesta">
-                                        <h3>Avesta (4) <small>Collection Bonus</small></h3>
+                                        <h3>Avesta (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11310,7 +11316,7 @@
                                     </div>
 
                                     <div id="Arkesian Orchestra">
-                                        <h3>Arkesian Orchestra (8) <small>Collection Bonus</small></h3>
+                                        <h3>Arkesian Orchestra (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11333,7 +11339,7 @@
                                     </div>
 
                                     <div id="Alteisen">
-                                        <h3>Alteisen (3) <small>Collection Bonus</small></h3>
+                                        <h3>Alteisen (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11356,7 +11362,7 @@
                                     </div>
 
                                     <div id="Boozehound">
-                                        <h3>Boozehound (6) <small>Collection Bonus</small></h3>
+                                        <h3>Boozehound (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11379,7 +11385,7 @@
                                     </div>
 
                                     <div id="You, Too?">
-                                        <h3>You, Too? (2) <small>Collection Bonus</small></h3>
+                                        <h3>You, Too? (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11402,7 +11408,7 @@
                                     </div>
 
                                     <div id="Dark Sorcery">
-                                        <h3>Dark Sorcery (2) <small>Collection Bonus</small></h3>
+                                        <h3>Dark Sorcery (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11425,7 +11431,7 @@
                                     </div>
 
                                     <div id="Hellfire Destroyer">
-                                        <h3>Hellfire Destroyer (4) <small>Collection Bonus</small></h3>
+                                        <h3>Hellfire Destroyer (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11448,7 +11454,7 @@
                                     </div>
 
                                     <div id="Hellfire Warrior">
-                                        <h3>Hellfire Warrior (3) <small>Collection Bonus</small></h3>
+                                        <h3>Hellfire Warrior (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11472,7 +11478,7 @@
 
 
                                     <div id="Verdantier Plan">
-                                        <h3>Verdantier Plan (6) <small>Collection Bonus</small></h3>
+                                        <h3>Verdantier Plan (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11495,7 +11501,7 @@
                                     </div>
 
                                     <div id="Elzowin&#39;s Choice">
-                                        <h3>Elzowin's Choice (3) <small>Collection Bonus</small></h3>
+                                        <h3>Elzowin's Choice (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11518,7 +11524,7 @@
                                     </div>
 
                                     <div id="Your Majesty?">
-                                        <h3>Your Majesty? (2) <small>Collection Bonus</small></h3>
+                                        <h3>Your Majesty? (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11541,7 +11547,7 @@
                                     </div>
 
                                     <div id="Girls&#39; Generation">
-                                        <h3>Girls' Generation (7) <small>Collection Bonus</small></h3>
+                                        <h3>Girls' Generation (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11564,7 +11570,7 @@
                                     </div>
 
                                     <div id="Plaguebringers">
-                                        <h3>Plaguebringers (2) <small>Collection Bonus</small></h3>
+                                        <h3>Plaguebringers (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11587,7 +11593,7 @@
                                     </div>
 
                                     <div id="Glorious Wall">
-                                        <h3>Glorious Wall (5) <small>Collection Bonus</small></h3>
+                                        <h3>Glorious Wall (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11610,7 +11616,7 @@
                                     </div>
 
                                     <div id="Soulmates">
-                                        <h3>Soulmates (2) <small>Collection Bonus</small></h3>
+                                        <h3>Soulmates (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11633,7 +11639,7 @@
                                     </div>
 
                                     <div id="Beautiful Kalaja">
-                                        <h3>Beautiful Kalaja (4) <small>Collection Bonus</small></h3>
+                                        <h3>Beautiful Kalaja (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11656,7 +11662,7 @@
                                     </div>
 
                                     <div id="Can&#39;t Go Home Again">
-                                        <h3>Can't Go Home Again (4) <small>Collection Bonus</small></h3>
+                                        <h3>Can't Go Home Again (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11679,7 +11685,7 @@
                                     </div>
 
                                     <div id="Five Hundred Years">
-                                        <h3>Five Hundred Years (2) <small>Collection Bonus</small></h3>
+                                        <h3>Five Hundred Years (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11702,7 +11708,7 @@
                                     </div>
 
                                     <div id="Seeking the Queen">
-                                        <h3>Seeking the Queen (8) <small>Collection Bonus</small></h3>
+                                        <h3>Seeking the Queen (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11725,7 +11731,7 @@
                                     </div>
 
                                     <div id="Succession Plans">
-                                        <h3>Succession Plans (2) <small>Collection Bonus</small></h3>
+                                        <h3>Succession Plans (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11748,7 +11754,7 @@
                                     </div>
 
                                     <div id="His Majesty&#39;s Qualifications">
-                                        <h3>His Majesty's Qualifications (5) <small>Collection Bonus</small></h3>
+                                        <h3>His Majesty's Qualifications (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11771,7 +11777,7 @@
                                     </div>
 
                                     <div id="Covetous Legion">
-                                        <h3>Covetous Legion (3) <small>Collection Bonus</small></h3>
+                                        <h3>Covetous Legion (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11794,7 +11800,7 @@
                                     </div>
 
                                     <div id="By My Umarian Beard">
-                                        <h3>By My Umarian Beard (10) <small>Collection Bonus</small></h3>
+                                        <h3>By My Umarian Beard (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11817,7 +11823,7 @@
                                     </div>
 
                                     <div id="The Weight of Destiny">
-                                        <h3>The Weight of Destiny (2) <small>Collection Bonus</small></h3>
+                                        <h3>The Weight of Destiny (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11840,7 +11846,7 @@
                                     </div>
 
                                     <div id="Not Allowed">
-                                        <h3>Not Allowed (2) <small>Collection Bonus</small></h3>
+                                        <h3>Not Allowed (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11865,7 +11871,7 @@
 
 
                                     <div id="The Enemy of Humanity is Humankind">
-                                        <h3>The Enemy of Humanity is Humankind (5) <small>Collection Bonus</small></h3>
+                                        <h3>The Enemy of Humanity is Humankind (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11888,7 +11894,7 @@
                                     </div>
 
                                     <div id="Life Starts at 60">
-                                        <h3>Life Starts at 60 (7) <small>Collection Bonus</small></h3>
+                                        <h3>Life Starts at 60 (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11911,7 +11917,7 @@
                                     </div>
 
                                     <div id="Nature&#39;s Elementals">
-                                        <h3>Nature's Elementals (6) <small>Collection Bonus</small></h3>
+                                        <h3>Nature's Elementals (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11934,7 +11940,7 @@
                                     </div>
 
                                     <div id="Take Care of Him">
-                                        <h3>Take Care of Him (2) <small>Collection Bonus</small></h3>
+                                        <h3>Take Care of Him (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11957,7 +11963,7 @@
                                     </div>
 
                                     <div id="Note from a Dear Friend">
-                                        <h3>Note from a Dear Friend (2) <small>Collection Bonus</small></h3>
+                                        <h3>Note from a Dear Friend (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -11980,7 +11986,7 @@
                                     </div>
 
                                     <div id="The Realm of Elementals">
-                                        <h3>The Realm of Elementals (7) <small>Collection Bonus</small></h3>
+                                        <h3>The Realm of Elementals (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12003,7 +12009,7 @@
                                     </div>
 
                                     <div id="Good Source of Protein">
-                                        <h3>Good Source of Protein (4) <small>Collection Bonus</small></h3>
+                                        <h3>Good Source of Protein (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12026,7 +12032,7 @@
                                     </div>
 
                                     <div id="Master, Your Order">
-                                        <h3>Master, Your Order (5) <small>Collection Bonus</small></h3>
+                                        <h3>Master, Your Order (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12049,7 +12055,7 @@
                                     </div>
 
                                     <div id="Plague Legion">
-                                        <h3>Plague Legion (9) <small>Collection Bonus</small></h3>
+                                        <h3>Plague Legion (9)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12072,7 +12078,7 @@
                                     </div>
 
                                     <div id="Master of Spears">
-                                        <h3>Master of Spears (6) <small>Collection Bonus</small></h3>
+                                        <h3>Master of Spears (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12095,7 +12101,7 @@
                                     </div>
 
                                     <div id="Changhun Tournament">
-                                        <h3>Changhun Tournament (10) <small>Collection Bonus</small></h3>
+                                        <h3>Changhun Tournament (10)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12118,7 +12124,7 @@
                                     </div>
 
                                     <div id="Guardian of Changhun">
-                                        <h3>Guardian of Changhun (5) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian of Changhun (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12142,7 +12148,7 @@
                                     </div>
 
                                     <div id="Checkmate">
-                                        <h3>Checkmate (6) <small>Collection Bonus</small></h3>
+                                        <h3>Checkmate (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12165,7 +12171,7 @@
                                     </div>
 
                                     <div id="Falling Sun">
-                                        <h3>Falling Sun (5) <small>Collection Bonus</small></h3>
+                                        <h3>Falling Sun (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12189,7 +12195,7 @@
 
 
                                     <div id="Descendent of Encavia">
-                                        <h3>Descendent of Encavia (4) <small>Collection Bonus</small></h3>
+                                        <h3>Descendent of Encavia (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12212,7 +12218,7 @@
                                     </div>
 
                                     <div id="Krause&#39;s Personal Guard">
-                                        <h3>Krause's Personal Guard (5) <small>Collection Bonus</small></h3>
+                                        <h3>Krause's Personal Guard (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12236,7 +12242,7 @@
 
 
                                     <div id="Kazeros&#39;s Legion Commanders">
-                                        <h3>Kazeros's Legion Commanders (6) <small>Collection Bonus</small></h3>
+                                        <h3>Kazeros's Legion Commanders (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12259,7 +12265,7 @@
                                     </div>
 
                                     <div id="Knut&#39;s Grave">
-                                        <h3>Knut's Grave (2) <small>Collection Bonus</small></h3>
+                                        <h3>Knut's Grave (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12282,7 +12288,7 @@
                                     </div>
 
                                     <div id="Stormcry Grotto">
-                                        <h3>Stormcry Grotto (4) <small>Collection Bonus</small></h3>
+                                        <h3>Stormcry Grotto (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12305,7 +12311,7 @@
                                     </div>
 
                                     <div id="Eye of Sceptrum">
-                                        <h3>Eye of Sceptrum (3) <small>Collection Bonus</small></h3>
+                                        <h3>Eye of Sceptrum (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12328,7 +12334,7 @@
                                     </div>
 
                                     <div id="Corrupt Flame">
-                                        <h3>Corrupt Flame (2) <small>Collection Bonus</small></h3>
+                                        <h3>Corrupt Flame (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12351,7 +12357,7 @@
                                     </div>
 
                                     <div id="Guardian of Tortoyk">
-                                        <h3>Guardian of Tortoyk (4) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian of Tortoyk (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12374,7 +12380,7 @@
                                     </div>
 
                                     <div id="Tortoyk&#39;s Wisdom">
-                                        <h3>Tortoyk's Wisdom (2) <small>Collection Bonus</small></h3>
+                                        <h3>Tortoyk's Wisdom (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12397,7 +12403,7 @@
                                     </div>
 
                                     <div id="Trixion">
-                                        <h3>Trixion (6) <small>Collection Bonus</small></h3>
+                                        <h3>Trixion (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12422,7 +12428,7 @@
 
 
                                     <div id="My Sword is Yours">
-                                        <h3>My Sword is Yours (5) <small>Collection Bonus</small></h3>
+                                        <h3>My Sword is Yours (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12445,7 +12451,7 @@
                                     </div>
 
                                     <div id="Ruined Castle">
-                                        <h3>Ruined Castle (3) <small>Collection Bonus</small></h3>
+                                        <h3>Ruined Castle (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12468,7 +12474,7 @@
                                     </div>
 
                                     <div id="Poppy">
-                                        <h3>Poppy (3) <small>Collection Bonus</small></h3>
+                                        <h3>Poppy (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12491,7 +12497,7 @@
                                     </div>
 
                                     <div id="Frejold">
-                                        <h3>Frejold (8) <small>Collection Bonus</small></h3>
+                                        <h3>Frejold (8)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12514,7 +12520,7 @@
                                     </div>
 
                                     <div id="Ties to the Beginning">
-                                        <h3>Ties to the Beginning (6) <small>Collection Bonus</small></h3>
+                                        <h3>Ties to the Beginning (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12538,7 +12544,7 @@
 
 
                                     <div id="Field Boss II">
-                                        <h3>Field Boss II (7) <small>Collection Bonus</small></h3>
+                                        <h3>Field Boss II (7)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12561,7 +12567,7 @@
                                     </div>
 
                                     <div id="One Body, Two Minds">
-                                        <h3>One Body, Two Minds (2) <small>Collection Bonus</small></h3>
+                                        <h3>One Body, Two Minds (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12584,7 +12590,7 @@
                                     </div>
 
                                     <div id="Desert of Sky">
-                                        <h3>Desert of Sky (6) <small>Collection Bonus</small></h3>
+                                        <h3>Desert of Sky (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12607,7 +12613,7 @@
                                     </div>
 
                                     <div id="Heaven for the Curious">
-                                        <h3>Heaven for the Curious (3) <small>Collection Bonus</small></h3>
+                                        <h3>Heaven for the Curious (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12630,7 +12636,7 @@
                                     </div>
 
                                     <div id="The Harvesters&#39; Grudge">
-                                        <h3>The Harvesters' Grudge (2) <small>Collection Bonus</small></h3>
+                                        <h3>The Harvesters' Grudge (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12653,7 +12659,7 @@
                                     </div>
 
                                     <div id="Guardian of Chaos">
-                                        <h3>Guardian of Chaos (2) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian of Chaos (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12676,7 +12682,7 @@
                                     </div>
 
                                     <div id="He&#39;s Starving">
-                                        <h3>He's Starving (3) <small>Collection Bonus</small></h3>
+                                        <h3>He's Starving (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12699,7 +12705,7 @@
                                     </div>
 
                                     <div id="Blackrose Chapel">
-                                        <h3>Blackrose Chapel (4) <small>Collection Bonus</small></h3>
+                                        <h3>Blackrose Chapel (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12722,7 +12728,7 @@
                                     </div>
 
                                     <div id="Remnants of Power">
-                                        <h3>Remnants of Power (4) <small>Collection Bonus</small></h3>
+                                        <h3>Remnants of Power (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12746,7 +12752,7 @@
 
 
                                     <div id="Oreha&#39;s Well">
-                                        <h3>Oreha's Well (4) <small>Collection Bonus</small></h3>
+                                        <h3>Oreha's Well (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12769,7 +12775,7 @@
                                     </div>
 
                                     <div id="Oreha&#39;s Star-crossed Love">
-                                        <h3>Oreha's Star-crossed Love (3) <small>Collection Bonus</small></h3>
+                                        <h3>Oreha's Star-crossed Love (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12792,7 +12798,7 @@
                                     </div>
 
                                     <div id="Don&#39;t Step on my Shadow">
-                                        <h3>Don't Step on my Shadow (6) <small>Collection Bonus</small></h3>
+                                        <h3>Don't Step on my Shadow (6)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12816,7 +12822,7 @@
                                     </div>
 
                                     <div id="Fate of the Lazeniths">
-                                        <h3>Fate of the Lazeniths (2) <small>Collection Bonus</small></h3>
+                                        <h3>Fate of the Lazeniths (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12840,7 +12846,7 @@
 
 
                                     <div id="Are You an Outcast?">
-                                        <h3>Are You an Outcast? (2) <small>Collection Bonus</small></h3>
+                                        <h3>Are You an Outcast? (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12865,7 +12871,7 @@
 
 
                                     <div id="A Mistaken Encounter">
-                                        <h3>A Mistaken Encounter (2) <small>Collection Bonus</small></h3>
+                                        <h3>A Mistaken Encounter (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12888,7 +12894,7 @@
                                     </div>
 
                                     <div id="Grr">
-                                        <h3>Grr (2) <small>Collection Bonus</small></h3>
+                                        <h3>Grr (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12911,7 +12917,7 @@
                                     </div>
 
                                     <div id="The Fantastic Duo">
-                                        <h3>The Fantastic Duo (2) <small>Collection Bonus</small></h3>
+                                        <h3>The Fantastic Duo (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12934,7 +12940,7 @@
                                     </div>
 
                                     <div id="Kadan&#39;s Whereabouts">
-                                        <h3>Kadan's Whereabouts (4) <small>Collection Bonus</small></h3>
+                                        <h3>Kadan's Whereabouts (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12957,7 +12963,7 @@
                                     </div>
 
                                     <div id="Unspeakable Secret">
-                                        <h3>Unspeakable Secret (4) <small>Collection Bonus</small></h3>
+                                        <h3>Unspeakable Secret (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -12980,7 +12986,7 @@
                                     </div>
 
                                     <div id="The Senate&#39;s Plot">
-                                        <h3>The Senate's Plot (5) <small>Collection Bonus</small></h3>
+                                        <h3>The Senate's Plot (5)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -13005,7 +13011,7 @@
 
 
                                     <div id="A Sun That Rose in the South">
-                                        <h3>A Sun That Rose in the South (4) <small>Collection Bonus</small></h3>
+                                        <h3>A Sun That Rose in the South (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -13028,7 +13034,7 @@
                                     </div>
 
                                     <div id="I Can Hear You">
-                                        <h3>I Can Hear You (2) <small>Collection Bonus</small></h3>
+                                        <h3>I Can Hear You (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -13051,7 +13057,7 @@
                                     </div>
 
                                     <div id="Heat Hunter">
-                                        <h3>Heat Hunter (4) <small>Collection Bonus</small></h3>
+                                        <h3>Heat Hunter (4)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -13074,7 +13080,7 @@
                                     </div>
 
                                     <div id="Guardian&#39;s Punishment">
-                                        <h3>Guardian's Punishment (3) <small>Collection Bonus</small></h3>
+                                        <h3>Guardian's Punishment (3)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
@@ -13117,7 +13123,7 @@
                                         </table>
                                     </div>
                                     <div id="Anikka&#39;s Guardian">
-                                        <h3>Anikka's Guardian (2) <small>Collection Bonus</small></h3>
+                                        <h3>Anikka's Guardian (2)</h3>
                                         <table class="table table-striped table-hover table-bordered">
                                             <tbody>
                                                 <tr>
