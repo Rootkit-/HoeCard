@@ -4,7 +4,7 @@
 
     <script src="./src/sortable-table.js"></script>
     <script src="./src/jquery-3.6.1.js"></script>
-    <link href="./codex_files/bundle-1675273754991.min.css" rel="stylesheet">
+
     <style type="text/css">
 .sortable {
 margin-left:10px;
@@ -29,7 +29,107 @@ margin-left:5px;
 .sortable >th {
 	text-align: left;
 }
+.sr-only {
+  position: absolute;
+  top: -30em;
+}
 
+table.sortable td,
+table.sortable th {
+  padding: 0.125em 0.25em;
+  width: 8em;
+}
+
+table.sortable th {
+  font-weight: bold;
+  border-bottom: thin solid #888;
+  position: relative;
+}
+
+table.sortable th.no-sort {
+  padding-top: 0.35em;
+}
+
+table.sortable th:nth-child(5) {
+  width: 10em;
+}
+
+table.sortable th .button {
+  position: absolute;
+  padding: 4px;
+  margin: 1px;
+  font-size: 100%;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  display: inline;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+}
+
+table.sortable th button span {
+  position: absolute;
+  right: 4px;
+}
+
+table.sortable th[aria-sort="descending"] span::after {
+  content: "▼";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
+table.sortable th[aria-sort="ascending"] span::after {
+  content: "▲";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
+
+table.show-unsorted-icon th:not([aria-sort]) button span::after {
+  content: "♢";
+  color: currentcolor;
+  font-size: 100%;
+  position: relative;
+  top: -3px;
+  left: -4px;
+}
+
+table.sortable td.num {
+  text-align: right;
+}
+
+table.sortable tbody tr:nth-child(odd) {
+  background-color: #000;
+}
+
+/* Focus and hover styling */
+
+table.sortable th .button:focus,
+table.sortable th .button:hover {
+  padding: 2px;
+  border: 2px solid currentcolor;
+  background-color: #000;
+}
+
+table.sortable th .button:focus span,
+table.sortable th .button:hover span {
+  right: 2px;
+}
+
+table.sortable th:not([aria-sort]) .button:focus span::after,
+table.sortable th:not([aria-sort]) .button:hover span::after {
+  content: "▼";
+  color: currentcolor;
+  font-size: 100%;
+  top: 0;
+}
 
 </style>
 <body style="">
@@ -38,416 +138,416 @@ margin-left:5px;
     <thead>
       <tr>
         <th aria-sort="ascending">
-          <span class="button" data-column-index="0">
+          <div class="button" data-column-index="0">
             Name
-            <span aria-hidden="true"></span>
+            <div aria-hidden="true"></span>
           </button>
         </th>
         <th>
-          <span class="button" data-column-index="1">
+          <div class="button" data-column-index="1">
             First
             <span aria-hidden="true"></span>
           </button>
         </th>
         <th>
-          <span class="button" data-column-index="2">
+          <div class="button" data-column-index="2">
             Second
             <span aria-hidden="true"></span>
           </button>
         </th>
       </tr>
     </thead>
-    <tbody class="okay"><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_21.webp"> Anabel - Picnic Day</td><td>
+    <tbody class="okay"><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_21.webp"> Anabel - Picnic Day</td><td>
                                                         
                                                         Dispatch Action Energy Consumption -2%</td><td>Dispatch Adaptation +1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_177.webp"> Anke - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_177.webp"> Anke - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Trade Skill Tool] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_106.webp"> Artisan Urr - Summer Vacation</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_106.webp"> Artisan Urr - Summer Vacation</td><td>
                                                         
                                                         Crafting Time -2%</td><td>Crafting Great Success Chance +1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_69.webp"> Avele - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_69.webp"> Avele - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Dead Waters] Dispatch Time -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_108.webp"> Avele - The Knight Commander of Vern</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_108.webp"> Avele - The Knight Commander of Vern</td><td>
                                                         
                                                         [Dead Waters] Dispatch Time -4%</td><td>[Dead Waters] Dispatch Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_179.webp"> Azakiel - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_179.webp"> Azakiel - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Tempest Seas] Dispatch Adaptation +1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_88.webp"> Azena - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_88.webp"> Azena - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Others] Crafting Time -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_63.webp"> Bastian - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_63.webp"> Bastian - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Kelp Beds] Dispatch Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_107.webp"> Bastian - Stern Commander</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_107.webp"> Bastian - Stern Commander</td><td>
                                                         
                                                         [Kelp Beds] Dispatch Action Energy Consumption -4%</td><td>[Kelp Beds] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_74.webp"> Blackfang - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_74.webp"> Blackfang - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Tempest Seas] Dispatch Time -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_130.webp"> Blackfang - Fancy Outing</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_130.webp"> Blackfang - Fancy Outing</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>Dispatch Cost -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_130.webp"> Blackfang - Fancy Outing</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_130.webp"> Blackfang - Fancy Outing</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>Dispatch Cost -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_134.webp"> Blackfang - Navy Officer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_134.webp"> Blackfang - Navy Officer</td><td>
                                                         
                                                         Dispatch Adaptation +2%</td><td>Dispatch Action Energy Consumption -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_85.webp"> Blue-Eyed Calvasus - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_85.webp"> Blue-Eyed Calvasus - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Sandstorm Seas] Dispatch Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_109.webp"> Blue-Eyed Calvasus - The Gentleman of the Beach</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_109.webp"> Blue-Eyed Calvasus - The Gentleman of the Beach</td><td>
                                                         
                                                         [Sandstorm Seas] Dispatch Action Energy Consumption -4%</td><td>[Sandstorm Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_50.webp"> Cals - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_50.webp"> Cals - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Kelp Beds] Dispatch Action Energy Consumption -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_113.webp"> Dancer Imar - The Attractive Man on the Beach</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_113.webp"> Dancer Imar - The Attractive Man on the Beach</td><td>
                                                         
                                                         [Sandstorm Seas] Dispatch Time -4%</td><td>[Sandstorm Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_68.webp"> Ealyn - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_68.webp"> Ealyn - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Potion] Crafting Action Energy Consumption -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_102.webp"> Ealyn - Vern Magick Academy</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_102.webp"> Ealyn - Vern Magick Academy</td><td>
                                                         
                                                         [Cold Snap Seas] Dispatch Time -4%</td><td>[Cold Snap Seas] Dispatch Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_83.webp"> Ezrebet - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_83.webp"> Ezrebet - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Potion] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_105.webp"> Ezrebet - True White Mistress</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_105.webp"> Ezrebet - True White Mistress</td><td>
                                                         
                                                         [Siren Seas] Dispatch Action Energy Consumption -4%</td><td>[Siren Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_35.webp"> Future Millionaire Zenri - The Free Bounty Hunter</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_35.webp"> Future Millionaire Zenri - The Free Bounty Hunter</td><td>
                                                         
                                                         [Battle Item - Bomb] Crafting Time -4%</td><td>[Cooking] Crafting Great Success Chance +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_33.webp"> Future Millionaire Zenri - The Lone Bounty Hunter</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_33.webp"> Future Millionaire Zenri - The Lone Bounty Hunter</td><td>
                                                         
                                                         [Battle Item - Bomb] Crafting Action Energy Consumption -4%</td><td>[Cooking] Crafting Great Success Chance +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_34.webp"> Future Millionaire Zenri - The Persistent Bounty Hunter</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_34.webp"> Future Millionaire Zenri - The Persistent Bounty Hunter</td><td>
                                                         
                                                         [Battle Item - Bomb] Crafting Cost -4%</td><td>[Cooking] Crafting Great Success Chance +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_115.webp"> Jahara - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_115.webp"> Jahara - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Others] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_95.webp"> Jederico - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_95.webp"> Jederico - Basic Outfit</td><td>
                                                     
                                                         
                                                         Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_136.webp"> Jederico - The Best Bodyguard</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_136.webp"> Jederico - The Best Bodyguard</td><td>
                                                         
                                                         [Tempest Seas] Dispatch Adaptation +4%</td><td>[Tempest Seas] Dispatch Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_91.webp"> Kaysarr - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_91.webp"> Kaysarr - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Tempest Seas] Dispatch Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_135.webp"> Kaysarr - The Underground Miner</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_135.webp"> Kaysarr - The Underground Miner</td><td>
                                                         
                                                         [Structure] Crafting Time -4%</td><td>[Structure] Crafting Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_84.webp"> Krissa - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_84.webp"> Krissa - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Bomb] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_111.webp"> Krissa - The Busy Specialist</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_111.webp"> Krissa - The Busy Specialist</td><td>
                                                         
                                                         [Battle Item - Bomb] Crafting Cost -4%</td><td>[Battle Item - Bomb] Crafting Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_117.webp"> Liru - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_117.webp"> Liru - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Siren Seas] Dispatch Time -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_96.webp"> Lutia - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_96.webp"> Lutia - Basic Outfit</td><td>
                                                     
                                                         
                                                         Crafting Great Success Chance +1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_133.webp"> Lutia - The Tomboy Scientist</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_133.webp"> Lutia - The Tomboy Scientist</td><td>
                                                         
                                                         Research Action Energy Consumption -2%</td><td>Research Cost -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_79.webp"> Mari - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_79.webp"> Mari - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Dead Waters] Dispatch Adaptation +2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_104.webp"> Mari - Mari, the transfer student</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_104.webp"> Mari - Mari, the transfer student</td><td>
                                                         
                                                         Research Time -2%</td><td>Research Cost -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_18.webp"> Mercenary Zeira - The Charming Novelist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_18.webp"> Mercenary Zeira - The Charming Novelist</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>[Siren Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_17.webp"> Mercenary Zeira - The Passionate Novelist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_17.webp"> Mercenary Zeira - The Passionate Novelist</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>[Sandstorm Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_19.webp"> Mercenary Zeira - The Pure Novelist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_19.webp"> Mercenary Zeira - The Pure Novelist</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>[Cold Snap Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_20.webp"> Mercenary Zeira - The Serious Novelist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_20.webp"> Mercenary Zeira - The Serious Novelist</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>[Dead Waters] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_10.webp"> Mokamoka - Exciting Picnic</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_10.webp"> Mokamoka - Exciting Picnic</td><td>
                                                         
                                                         Dispatch Cost -2%</td><td>[Dead Waters] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_10.webp"> Mokamoka - Exciting Picnic</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_10.webp"> Mokamoka - Exciting Picnic</td><td>
                                                         
                                                         Dispatch Cost -2%</td><td>[Dead Waters] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_9.webp"> Mokamoka - Fluttering Picnic</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_9.webp"> Mokamoka - Fluttering Picnic</td><td>
                                                         
                                                         Dispatch Cost -2%</td><td>[Sandstorm Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_9.webp"> Mokamoka - Fluttering Picnic</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_9.webp"> Mokamoka - Fluttering Picnic</td><td>
                                                         
                                                         Dispatch Cost -2%</td><td>[Sandstorm Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_8.webp"> Mokamoka - Fun Picnic</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_8.webp"> Mokamoka - Fun Picnic</td><td>
                                                         
                                                         Dispatch Cost -2%</td><td>[Tempest Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_8.webp"> Mokamoka - Fun Picnic</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_8.webp"> Mokamoka - Fun Picnic</td><td>
                                                         
                                                         Dispatch Cost -2%</td><td>[Tempest Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_3.webp"> Morina - The Picnic Day</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_3.webp"> Morina - The Picnic Day</td><td>
                                                         
                                                         [Tempest Seas] Dispatch Adaptation +4%</td><td>[Sandstorm Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_132.webp"> Nabi - Coy Nabi</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_132.webp"> Nabi - Coy Nabi</td><td>
                                                         
                                                         [Dead Waters] Dispatch Time -4%</td><td>[Dead Waters] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_132.webp"> Nabi - Coy Nabi</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_132.webp"> Nabi - Coy Nabi</td><td>
                                                         
                                                         [Dead Waters] Dispatch Time -4%</td><td>[Dead Waters] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_116.webp"> Nagi - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_116.webp"> Nagi - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Potion] Crafting Time -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_171.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_171.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         Crafting Action Energy Consumption -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_92.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_92.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Grenade] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_48.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_48.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Action Energy Consumption -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_48.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_48.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Action Energy Consumption -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_51.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_51.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_59.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_59.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Great Success Chance +1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_39.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_39.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Time -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_39.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_39.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Time -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_39.webp"> Neria - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_39.webp"> Neria - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Cooking] Crafting Time -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_1.webp"> Neria - The Approaching Confession</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_1.webp"> Neria - The Approaching Confession</td><td>
                                                         
                                                         Chef's Kitchen Action Energy Consumption -2%</td><td>Chef's Kitchen Cost -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_112.webp"> Neria - The Battlefield Flower</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_112.webp"> Neria - The Battlefield Flower</td><td>
                                                         
                                                         [Battle Item - Grenade] Crafting Cost -4%</td><td>[Battle Item - Grenade] Crafting Time -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_7.webp"> Neria - The Cool-Headed Secretary</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_7.webp"> Neria - The Cool-Headed Secretary</td><td>
                                                         
                                                         Research Cost -2%</td><td>Research Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_0.webp"> Neria - The Excited Feeling</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_0.webp"> Neria - The Excited Feeling</td><td>
                                                         
                                                         Chef's Kitchen Action Energy Consumption -2%</td><td>Crafting Great Success Chance +1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_4.webp"> Neria - The Voice of Luterra</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_4.webp"> Neria - The Voice of Luterra</td><td>
                                                         
                                                         [Cooking] Crafting Time -4%</td><td>[Cooking] Crafting Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_110.webp"> Neth - Miss Goblin</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_110.webp"> Neth - Miss Goblin</td><td>
                                                         
                                                         [Kelp Beds] Dispatch Time -4%</td><td>[Kelp Beds] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_114.webp"> Nia - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_114.webp"> Nia - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Special] Crafting Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_99.webp"> Nineveh - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_99.webp"> Nineveh - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Tempest Seas] Dispatch Adaptation +2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_167.webp"> Nineveh - Cute Adventurer</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_167.webp"> Nineveh - Cute Adventurer</td><td>
                                                         
                                                         [Dead Waters] Dispatch Cost -4%</td><td>[Dead Waters] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_167.webp"> Nineveh - Cute Adventurer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_167.webp"> Nineveh - Cute Adventurer</td><td>
                                                         
                                                         [Dead Waters] Dispatch Cost -4%</td><td>[Dead Waters] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_125.webp"> Nineveh - Cute Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_125.webp"> Nineveh - Cute Maid</td><td>
                                                         
                                                         Crafting Great Success Chance +2%</td><td>Crafting Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_125.webp"> Nineveh - Cute Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_125.webp"> Nineveh - Cute Maid</td><td>
                                                         
                                                         Crafting Great Success Chance +2%</td><td>Crafting Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_124.webp"> Nineveh - Diligent Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_124.webp"> Nineveh - Diligent Maid</td><td>
                                                         
                                                         Research Action Energy Consumption -2%</td><td>Research Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_124.webp"> Nineveh - Diligent Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_124.webp"> Nineveh - Diligent Maid</td><td>
                                                         
                                                         Research Action Energy Consumption -2%</td><td>Research Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_169.webp"> Nineveh - Elegant Adventurer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_169.webp"> Nineveh - Elegant Adventurer</td><td>
                                                         
                                                         [Siren Seas] Dispatch Cost -4%</td><td>[Siren Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_169.webp"> Nineveh - Elegant Adventurer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_169.webp"> Nineveh - Elegant Adventurer</td><td>
                                                         
                                                         [Siren Seas] Dispatch Cost -4%</td><td>[Siren Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_166.webp"> Nineveh - Exciting Adventurer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_166.webp"> Nineveh - Exciting Adventurer</td><td>
                                                         
                                                         [Kelp Beds] Dispatch Cost -4%</td><td>[Kelp Beds] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_166.webp"> Nineveh - Exciting Adventurer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_166.webp"> Nineveh - Exciting Adventurer</td><td>
                                                         
                                                         [Kelp Beds] Dispatch Cost -4%</td><td>[Kelp Beds] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_126.webp"> Nineveh - Haughty Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_126.webp"> Nineveh - Haughty Maid</td><td>
                                                         
                                                         Dispatch Adaptation +2%</td><td>Dispatch Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_127.webp"> Nineveh - Innocent Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_127.webp"> Nineveh - Innocent Maid</td><td>
                                                         
                                                         Research Action Energy Consumption -2%</td><td>Research Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_129.webp"> Nineveh - Naughty and Nice Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_129.webp"> Nineveh - Naughty and Nice Maid</td><td>
                                                         
                                                         Dispatch Adaptation +2%</td><td>Dispatch Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_168.webp"> Nineveh - Neat Adventurer</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_168.webp"> Nineveh - Neat Adventurer</td><td>
                                                         
                                                         [Cold Snap Seas] Dispatch Cost -4%</td><td>[Cold Snap Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_128.webp"> Nineveh - Sunshine Maid</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_128.webp"> Nineveh - Sunshine Maid</td><td>
                                                         
                                                         Crafting Great Success Chance +2%</td><td>Crafting Time -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_24.webp"> Payla - Ranger Uniform</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_24.webp"> Payla - Ranger Uniform</td><td>
                                                         
                                                         Dispatch Time -2%</td><td>Dispatch Action Energy Consumption -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_25.webp"> Payla - Vern Ball</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_25.webp"> Payla - Vern Ball</td><td>
                                                         
                                                         [Special] Crafting Great Success Chance +4%</td><td>[Special] Crafting Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_175.webp"> Piela - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_175.webp"> Piela - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Potion] Crafting Great Success Chance +1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_11.webp"> Poppy - The Machine Engineering Poppy</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_11.webp"> Poppy - The Machine Engineering Poppy</td><td>
                                                         
                                                         [Battle Item - Others] Crafting Cost -4%</td><td>[Battle Item - Others] Crafting Time -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_180.webp"> Prophet Belomet - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_180.webp"> Prophet Belomet - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Siren Seas] Dispatch Adaptation +1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_139.webp"> Puppa - Quartermaster Panda Puppa</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_139.webp"> Puppa - Quartermaster Panda Puppa</td><td>
                                                         
                                                         [Dead Waters] Dispatch Cost -4%</td><td>[Dead Waters] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_30.webp"> Ryeon's Ghost - The Glorious Memory</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_30.webp"> Ryeon's Ghost - The Glorious Memory</td><td>
                                                         
                                                         [Siren Seas] Dispatch Time -4%</td><td>[Siren Seas] Dispatch Adaptation +2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_31.webp"> Ryeon's Ghost - The Nostalgic Memory</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_31.webp"> Ryeon's Ghost - The Nostalgic Memory</td><td>
                                                         
                                                         [Siren Seas] Dispatch Time -4%</td><td>[Siren Seas] Dispatch Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_32.webp"> Ryeon's Ghost - The Vague Memory</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_32.webp"> Ryeon's Ghost - The Vague Memory</td><td>
                                                         
                                                         [Siren Seas] Dispatch Time -4%</td><td>[Siren Seas] Dispatch Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_62.webp"> Sasha - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_62.webp"> Sasha - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Battle Item - Grenade] Crafting Time -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_101.webp"> Sasha - Stern Marine Girl</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_101.webp"> Sasha - Stern Marine Girl</td><td>
                                                         
                                                         Research Action Energy Consumption -2%</td><td>Crafting Action Energy Consumption -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_118.webp"> Shana - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_118.webp"> Shana - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Kelp Beds] Dispatch Time -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_178.webp"> Sylus - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_178.webp"> Sylus - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Siren Seas] Dispatch Action Energy Consumption -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_138.webp"> Tanay - Good Student Tanay</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_138.webp"> Tanay - Good Student Tanay</td><td>
                                                         
                                                         Research Time -2%</td><td>Research Action Energy Consumption -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_170.webp"> Thar - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_170.webp"> Thar - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Siren Seas] Dispatch Cost -1%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_49.webp"> Thirain - Basic Outfit</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_49.webp"> Thirain - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Sandstorm Seas] Dispatch Time -2%
                                                     
-                                                </td><td></td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_100.webp"> Thirain - The Irresistible Heir</td><td>
+                                                </td><td></td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_100.webp"> Thirain - The Irresistible Heir</td><td>
                                                         
                                                         Crafting Time -2%</td><td>1% Crafting Cost Reduction
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_131.webp"> Thunder - The Noble Maiden</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_131.webp"> Thunder - The Noble Maiden</td><td>
                                                         
                                                         [Cold Snap Seas] Dispatch Adaptation +4%</td><td>[Cold Snap Seas] Dispatch Time -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_137.webp"> Toto Elder - The Friend of Birds</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_137.webp"> Toto Elder - The Friend of Birds</td><td>
                                                         
                                                         Chef's Kitchen Cost -2%</td><td>Chef's Kitchen Action Energy Consumption -1%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_140.webp"> Vivian - The Fair Lady</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_140.webp"> Vivian - The Fair Lady</td><td>
                                                         
                                                         [Cooking] Crafting Cost -4%</td><td>[Trade Skill Tool] Crafting Cost -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_28.webp"> Yuul - The Calm Martial Artist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_28.webp"> Yuul - The Calm Martial Artist</td><td>
                                                         
                                                         [Battle Item - Grenade] Crafting Time -4%</td><td>[Battle Item - Grenade] Crafting Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_29.webp"> Yuul - The Cool-Headed Martial Artist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_29.webp"> Yuul - The Cool-Headed Martial Artist</td><td>
                                                         
                                                         Crafting Time -4%</td><td>Crafting Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_27.webp"> Yuul - The Fancy Martial Artist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_27.webp"> Yuul - The Fancy Martial Artist</td><td>
                                                         
                                                         [Battle Item - Bomb] Crafting Time -4%</td><td>[Battle Item - Bomb] Crafting Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_26.webp"> Yuul - The Kind Martial Artist</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_26.webp"> Yuul - The Kind Martial Artist</td><td>
                                                         
                                                         [Battle Item - Potion] Crafting Time -4%</td><td>[Battle Item - Potion] Crafting Action Energy Consumption -2%
-                                                    </td></tr><tr><td><img class="item_icon" src="file:///C:/Users/Tyler/Documents/R/HoeCard/docs/codex_files/fam_dress_01_165.webp"> Zinnervale - Basic Outfit</td><td>
+                                                    </td></tr><tr><td><img class="item_icon" src="./codex_files/fam_dress_01_165.webp"> Zinnervale - Basic Outfit</td><td>
                                                     
                                                         
                                                         [Tempest Seas] Dispatch Action Energy Consumption -1%
