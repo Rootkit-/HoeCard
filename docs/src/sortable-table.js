@@ -19,7 +19,7 @@ class SortableTable {
 
     for (var i = 0; i < this.columnHeaders.length; i++) {
       var ch = this.columnHeaders[i];
-      var buttonNode = ch.querySelector('.button');
+      var buttonNode = ch.querySelector('button');
       if (buttonNode) {
         this.sortColumns.push(i);
         buttonNode.setAttribute('data-column-index', i);
