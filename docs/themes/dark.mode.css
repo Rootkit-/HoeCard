@@ -760,15 +760,11 @@ span:not(.spinner-item) {
 }
 
 .theme-dark .mentioned_fa6fd2 {
-    background: linear-gradient(60deg,
-            rgba(41, 41, 41, 0.3),
-            rgba(var(--accentcolor), 0.9)) !important;
+    background-color: rgba(var(--accentcolor), 0.1)) !important;
 }
 
 .theme-dark .mentioned_fa6fd2:hover {
-    background: linear-gradient(60deg,
-            rgba(32, 32, 32, 0.5),
-            rgba(var(--accentcolor))) !important;
+    background-color: rgba(var(--accentcolor), 0.5)) !important;
 }
 
 /*user popout animation*/
