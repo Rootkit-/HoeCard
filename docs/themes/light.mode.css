@@ -2723,12 +2723,12 @@ button {
 }
 
 /*custom chillax theme card*/
-#Chillax-card .bd-name {
+#HoeChill-card .bd-name {
     font-size: 100px;
     text-align: left;
 }
 
-#Chillax-card .bd-name::after {
+#HoeChill-card .bd-name::after {
     font-size: 20px;
     content: "activated";
     display: block;
@@ -2736,44 +2736,44 @@ button {
     margin-left: 15px;
 }
 
-.theme-dark #Chillax-card .bd-meta {
+.theme-dark #HoeChill-card .bd-meta {
     margin-left: 15px;
     bottom: 25px;
     color: rgb(226, 226, 226);
 }
 
-#Chillax-card {
+#HoeChill-card {
     border: 2px solid var(--accentcolorV2);
     box-shadow: 0 0 5px var(--accentcolorV2);
 }
 
-#Chillax-card .bd-addon-header {
+#HoeChill-card .bd-addon-header {
     border-bottom: 2px solid var(--accentcolorV2);
     box-shadow: 0 0 5px var(--accentcolorV2);
 }
 
-#Chillax-card > *:not(#a#B) {
+#HoeChill-card > *:not(#a#B) {
     background: rgba(var(--accentcolor), .2) !important;
 }
 
-#Chillax-card .bd-description {
+#HoeChill-card .bd-description {
     display: none;
 }
 
-.theme-dark #Chillax-card [href='https\:\/\/github.com/warrayquipsome/Chillax'] {
+.theme-dark #HoeChill-card [href='https\:\/\/github.com/warrayquipsome/Chillax'] {
     color: #fff !important;
 }
 
-.theme-dark #Chillax-card [href='DrfX6286kF'] {
+.theme-dark #HoeChill-card [href='DrfX6286kF'] {
     color: #fff !important;
 }
 
-.bd-grid-view #Chillax-card .bd-name {
+.bd-grid-view #HoeChill-card .bd-name {
     font-size: 70px;
     text-align: left;
 }
 
-.bd-grid-view #Chillax-card .bd-name::after {
+.bd-grid-view #HoeChill-card .bd-name::after {
     font-size: 20px;
     content: "activated";
     display: block;
@@ -2781,7 +2781,7 @@ button {
     margin-left: 10px;
 }
 
-.theme-light .bd-grid-view #Chillax-card .bd-meta {
+.theme-light .bd-grid-view #HoeChill-card .bd-meta {
     margin-left: -50px;
     bottom: 25px;
     color: rgb(0, 0, 0);
