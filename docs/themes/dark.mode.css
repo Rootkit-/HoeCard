@@ -2830,7 +2830,7 @@ div[class="field__69fa0"]>button[aria-label="Edit username"][class="fieldButton_
 }
 
 .theme-dark .field__69fa0 {
-    width: calc((100% / 2.2) - ((-45 / 3) * 1px));
+    width: calc((100% / 1.1) - ((-45 / 3) * 1px));
     border-radius: 8px;
     background-color: #333135;
     max-height: none;
