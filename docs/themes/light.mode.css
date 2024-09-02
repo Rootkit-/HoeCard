@@ -1829,13 +1829,11 @@ svg {
 }
 
 .panels_a4d4d9 > .container_b2ca13 .flex_dc333f > :not(:last-child) {
-    opacity: 0% !important;
-    width: 50px;
-    transition: all 0.3s;
+    width: 32px;
+    margin-left: 10px;
 }
 
 .panels_a4d4d9 > .container_b2ca13:hover .flex_dc333f > :not(:last-child) {
-    opacity: 100% !important;
     width: 32px;
     margin-left: 10px;
 }
